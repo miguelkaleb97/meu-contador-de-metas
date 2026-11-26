@@ -1,148 +1,206 @@
+
 import { StyleSheet } from "react-native";
+import { colors } from "./colors";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+
   conteudo: {
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
     paddingTop: 40,
+    paddingBottom: 30,
   },
+
   cartao: {
     width: "100%",
     maxWidth: 430,
-    backgroundColor: "#FFFFFF",
-    borderRadius: 22,
-    padding: 22,
-    elevation: 4,
-    shadowColor: "#000000",
-    shadowOpacity: 0.12,
-    shadowRadius: 10,
-  },
-  titulo: {
-    fontSize: 23,
-    fontWeight: "700",
-    color: "#1E3A8A",
-    textAlign: "center",
-  },
-  subtitulo: {
-    fontSize: 15,
-    color: "#64748B",
-    textAlign: "center",
-    marginTop: 6,
-    marginBottom: 18,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#CBD5E1",
     borderRadius: 12,
-    padding: 13,
-    color: "#0F172A",
+    padding: 22,
+    borderWidth: 3,
+    borderColor: colors.primary,
+    elevation: 8,
+    shadowColor: "#000000",
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 5 },
   },
-  boasVindas: {
-    fontSize: 17,
-    fontWeight: "600",
-    color: "#0F172A",
-    textAlign: "center",
-    marginVertical: 15,
-  },
-  visor: {
-    backgroundColor: "#EEF2FF",
-    borderRadius: 18,
-    padding: 20,
+
+  cabecalho: {
     alignItems: "center",
     marginBottom: 12,
   },
-  rotulo: {
-    color: "#475569",
+
+  etiqueta: {
+    color: colors.primary,
     fontSize: 12,
-    fontWeight: "700",
-  },
-  numero: {
-    color: "#312E81",
-    fontSize: 52,
-    fontWeight: "800",
-  },
-  mensagem: {
-    color: "#15803D",
-    fontWeight: "700",
-    textAlign: "center",
-    marginBottom: 14,
-  },
-  dica: {
-    color: "#64748B",
-    textAlign: "center",
-    marginBottom: 14,
-  },
-  linhaBotoes: {
-    width: "100%",
-    flexDirection: "row",
+    fontWeight: "900",
+    letterSpacing: 3,
     marginBottom: 10,
   },
-  botao: {
-    flex: 1,
-    paddingVertical: 14,
-    borderRadius: 12,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  botaoMenos: {
-    backgroundColor: "#2563EB",
-    marginRight: 6,
-  },
-  botaoMais: {
-    backgroundColor: "#16A34A",
-    marginLeft: 6,
-  },
-  botaoZerar: {
-    backgroundColor: "#64748B",
-    marginRight: 6,
-  },
-  botaoTema: {
-    backgroundColor: "#7C3AED",
-    marginLeft: 6,
-  },
-  botaoDesabilitado: {
-    opacity: 0.45,
-  },
-  textoBotao: {
-    color: "#FFFFFF",
-    fontSize: 15,
-    fontWeight: "700",
-  },
-  rodape: {
-    marginTop: 18,
-    fontSize: 12,
+
+  titulo: {
+    fontSize: 25,
+    fontWeight: "900",
+    color: colors.primary,
     textAlign: "center",
+  },
+
+  subtitulo: {
+    fontSize: 13,
+    textAlign: "center",
+    marginTop: 7,
+    marginBottom: 20,
+  },
+
+  input: {
+    borderWidth: 2,
+    borderRadius: 7,
+    padding: 14,
+    fontSize: 14,
+    marginBottom: 12,
+  },
+
+  boasVindas: {
+    fontSize: 17,
+    fontWeight: "900",
+    textAlign: "center",
+    marginVertical: 12,
+  },
+
+  visor: {
+    borderRadius: 8,
+    borderWidth: 3,
+    borderColor: colors.primary,
+    padding: 20,
+    alignItems: "center",
+    marginVertical: 10,
+  },
+
+  legendaVisor: {
+    fontSize: 12,
+    fontWeight: "900",
+    letterSpacing: 2,
+    marginBottom: 8,
+  },
+
+  numero: {
+    fontSize: 46,
+    fontWeight: "900",
+    letterSpacing: 3,
+  },
+
+  textoVisor: {
+    fontSize: 12,
+    marginTop: 5,
+    fontWeight: "700",
   },
 
   linhaMeta: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 8,
+    marginTop: 15,
+    marginBottom: 9,
   },
 
   barraFundo: {
-    height: 10,
-    backgroundColor: "#E2E8F0",
-    borderRadius: 20,
+    height: 13,
+    borderRadius: 3,
     overflow: "hidden",
+    borderWidth: 1,
+    borderColor: colors.secondary,
   },
 
   barraProgresso: {
-    height: 10,
-    backgroundColor: "#22A447",
-    borderRadius: 20,
+    height: 13,
+    backgroundColor: colors.progress,
+    borderRadius: 2,
   },
 
   textoProgresso: {
     textAlign: "center",
     marginTop: 8,
     marginBottom: 15,
-    color: "#64748B",
+    fontWeight: "900",
+    fontSize: 12,
+  },
+
+  mensagem: {
+    color: colors.primary,
+    fontWeight: "900",
+    textAlign: "center",
+    marginBottom: 14,
+    fontSize: 15,
+  },
+
+  dica: {
+    textAlign: "center",
+    marginBottom: 14,
+  },
+
+  linhaBotoes: {
+    width: "100%",
+    flexDirection: "row",
+    marginBottom: 11,
+  },
+
+  botao: {
+    flex: 1,
+    paddingVertical: 15,
+    borderRadius: 7,
+    borderWidth: 2,
+    borderColor: "#526B43",
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 3,
+  },
+
+  botaoMenos: {
+    backgroundColor: colors.secondary,
+    marginRight: 6,
+  },
+
+  botaoMais: {
+    backgroundColor: colors.success,
+    marginLeft: 6,
+  },
+
+  botaoZerar: {
+    backgroundColor: colors.secondary,
+    marginRight: 6,
+  },
+
+  botaoTema: {
+    backgroundColor: colors.purple,
+    marginLeft: 6,
+  },
+
+  botaoDesabilitado: {
+    opacity: 0.4,
+  },
+
+  textoBotao: {
+    color: "#FFFFFF",
+    fontSize: 12,
+    fontWeight: "900",
+  },
+
+  rodape: {
+    marginTop: 18,
+    fontSize: 11,
+    textAlign: "center",
+    fontWeight: "700",
+  },
+
+  confete: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    fontSize: 27,
   },
 });
 
